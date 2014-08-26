@@ -4,11 +4,11 @@ class ProductsControllerTest < ActionController::TestCase
   setup do
     @product = products(:one)
     @update = {
-      title:  'Iphone',
-      description: 'Apple iPhone 6 smartphone. Exp. announcement 2014, September. Features 3G, LED-backlit IPS LCD display, 8 MP camera, Wi-Fi, GPS, Bluetooth.',
-      image_url: ' iphone6s-rendering.jpg',
-      price: 540.0
-    }
+                title: 'Lorem Ipsum',
+                description: 'Wibbles are fun!',
+                image_url:'lorem.jpg',
+                price: 19.95
+              }
 
   end
 
@@ -27,7 +27,7 @@ class ProductsControllerTest < ActionController::TestCase
     assert_difference('Product.count') do
       post :create, product: @update
 
-    end
+      end
 
     assert_redirected_to product_path(assigns(:product))
   end
@@ -43,9 +43,9 @@ class ProductsControllerTest < ActionController::TestCase
   end
 
   test "should update product" do
-   patch :update, id: @product, product: @update
-   assert_redirected_to product_path(assigns(:product))
+    patch :update, id: @product, product: @update
 
+    assert_redirected_to product_path(assigns(:product))
   end
 
   test "should destroy product" do

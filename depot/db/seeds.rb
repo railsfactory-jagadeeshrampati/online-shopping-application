@@ -36,3 +36,4 @@ how to work with Ubuntu from the scratch.
 image_url: 'ubuntu.jpeg',
 price: 79.36)
 
+

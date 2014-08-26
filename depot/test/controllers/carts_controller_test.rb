@@ -1,4 +1,4 @@
-000000000000000require 'test_helper'
+require 'test_helper'
 
 class CartsControllerTest < ActionController::TestCase
   setup do
