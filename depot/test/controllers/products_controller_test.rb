@@ -4,12 +4,11 @@ class ProductsControllerTest < ActionController::TestCase
   setup do
     @product = products(:one)
     @update = {
-                title: 'Lorem Ipsum',
-                description: 'Wibbles are fun!',
-                image_url:'lorem.jpg',
-                price: 19.95
-              }
-
+       title:'Lorem Ipsum',
+       description: 'Wibbles are fun!',
+       image_url: 'lorem.jpg',
+       price: 19.95
+}
   end
 
   test "should get index" do
@@ -27,7 +26,7 @@ class ProductsControllerTest < ActionController::TestCase
     assert_difference('Product.count') do
       post :create, product: @update
 
-      end
+    end
 
     assert_redirected_to product_path(assigns(:product))
   end
@@ -44,7 +43,6 @@ class ProductsControllerTest < ActionController::TestCase
 
   test "should update product" do
     patch :update, id: @product, product: @update
-
     assert_redirected_to product_path(assigns(:product))
   end
 

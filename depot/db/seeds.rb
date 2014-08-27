@@ -35,5 +35,20 @@ how to work with Ubuntu from the scratch.
 </p>},
 image_url: 'ubuntu.jpeg',
 price: 79.36)
-
+#. . .
+Product.create!(title: 'CoffeeScript',
+description:
+%{<p>
+CoffeeScript: Accelerated JavaScript Development offers a thorough introduction to this new language, starting from the basics. You’ll learn to use time-saving features like list comprehensions and splats, organize your code into modules with extensible classes, and see how to deploy your work to multiple environments. Each chapter is example-driven and includes challenging exercises to push your CoffeeScript know-how further
+</p>},
+image_url: 'cs.jpeg',
+price: 34)
+#. . .
+Product.create!(title: 'Rails 4 Test Prescriptions: Build a Healthy Codebase',
+description:
+%{<p>
+Your Ruby on Rails application is sick. Deadlines are looming, but every time you make the slightest change to the code, something else breaks. Nobody remembers what that tricky piece of code was supposed to do, and nobody can tell what it actually does. Plus, it has bugs. You need test-driven development, a process for improving the design, maintainability, and long-term viability of software.
+</p>},
+image_url: 'ruby.jpeg',
+price: 40)
 
