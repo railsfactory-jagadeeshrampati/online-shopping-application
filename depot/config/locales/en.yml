@@ -59,6 +59,23 @@ en:
       pay_prompt_html: "Select a payment method"
       submit:       "Place Order"
 
+  questions:
+    new:
+      legend:       "Please Enter Your Question"
+    form:
+      name:         "Name"
+      email:        "E-mail"
+      ques:         "Question"
+      submit:       "Submit"
+
+  blogs:
+    new:
+      legend:       "Enter News"
+    form:
+      name:         "Name"
+      content:      "Content"
+      submit:       "Submit"
+
   thanks:         "Thank you for your order"
 
 

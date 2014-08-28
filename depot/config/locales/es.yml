@@ -38,6 +38,23 @@ es:
       pay_prompt_html: "Seleccione un m&eacute;todo de pago"
       submit:       "Realizar Pedido"
 
+  questions:
+    new:
+      legend:       "Introduzca su pregunta"
+    form:
+      name:         "Nombre"
+      email:        "E-mail"
+      ques:         "pregunta"
+      submit:       "Enviar"
+
+  blogs:
+    new:
+      legend:       "Ingrese Noticias"
+    form:
+      name:         "Nombre"
+      content:      "contenido"
+      submit:       "Enviar"
+
   activerecord:
     errors:
       messages:
@@ -50,13 +67,13 @@ es:
         one:   "1 error ha impedido que este %{model} se guarde"
         other: "%{count} errores han impedido que este %{model} se guarde"
 
-  
+
   thanks:        "Gracias por su pedido"
 
 
 
 
- 
+
 
 
 

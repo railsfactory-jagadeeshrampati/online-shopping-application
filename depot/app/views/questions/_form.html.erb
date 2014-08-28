@@ -1,0 +1,31 @@
+<%= form_for(@question) do |f| %>
+  <% if @question.errors.any? %>
+    <div id="error_explanation">
+      <h2><%=raw t('errors.template.header', count: @question.errors.count,
+        model: t('activerecord.models.question')) %>.</h2>
+      <p><%= t('errors.template.body') %></p>
+
+      <ul>
+      <% @question.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name, t('.name') %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :email, t('.email') %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :ques, t('.ques') %><br>
+    <%= f.text_field :ques %>
+  </div>
+  <div class="actions">
+    <%= f.submit t('.submit')%>
+  </div>
+<% end %>

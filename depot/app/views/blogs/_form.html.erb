@@ -1,0 +1,27 @@
+<%= form_for(@blog) do |f| %>
+  <% if @blog.errors.any? %>
+    <div id="error_explanation">
+      <h2><%=raw t('errors.template.header', count: @blog.errors.count,
+        model: t('activerecord.blogss.question')) %>.</h2>
+      <p><%= t('errors.template.body') %></p>
+
+      <ul>
+      <% @blog.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name, t('.name') %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :content, t('.content') %><br>
+    <%= f.text_area :content %>
+  </div>
+  <div class="actions">
+    <%= f.submit t('.submit') %>
+  </div>
+<% end %>
