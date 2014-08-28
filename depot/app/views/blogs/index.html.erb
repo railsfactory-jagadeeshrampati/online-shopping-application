@@ -3,8 +3,7 @@
 <table>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Content</th>
+      
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -12,16 +11,22 @@
   <tbody>
     <% @blogs.each do |blog| %>
       <tr>
-        <td><%= blog.name %></td>
-        <td><%= blog.content %></td>
-        <td><%= link_to 'Show', blog %></td>
-        <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
-        <td><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <dt><b><%= blog.name %></b></dt>
+          <dd><%= blog.content %></dd>
+           <dl>Posted <%= time_ago_in_words(blog.created_at) %> ago </dl>
+
+        <% if session[:user_id] %>
+        <dd><%= link_to 'Show', blog %> 
+        <%= link_to 'Edit', edit_blog_path(blog) %> 
+         <%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %></dd>
+        <% end %>
+        <br />
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
+<% if session[:user_id] %>
 <%= link_to 'Post News', new_blog_path %>
+<% end %>
