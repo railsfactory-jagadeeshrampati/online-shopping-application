@@ -10,7 +10,7 @@ Rails.application.routes.draw do
    delete 'logout' => :destroy
   end
 
-
+  get 'contact' => 'blogs#contact'
   get 'sessions/create'
 
   get 'sessions/destroy'
